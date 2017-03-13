@@ -97,7 +97,7 @@ If we zoom in to take a close look at stage 1 (left) and stage 2 (right):
 ![alt text][P7_output1_zoom]
 we can see stage2 looks just like stage1 with the lower frequency component removed.
 
-For stage segmentation, I used a sliding window techique with window size = 1000 and strike length = 1000 (no overlay). 'Max', 'std' and the number of dominent signal components (expect stage1 has 2 dominent components and stage2 has 1) are extracted from each window. then 'if _max>1.5 and _std>1 and _numcompo == 2', I segment the window as stage1 (coded as 1), 'if _max<1.1 and _std<1 and _numcompo == 1', I segment the window as stage2 (coded as -1), otherwise the window is stage3 (coded as 0). The segmentation result on output1 is shown below: 
+For stage segmentation, I used a sliding window techique with window size = 1000 and strike length = 1000 (no overlay). `Max`, `std` and the number of dominent signal components (expect stage1 has 2 dominent components and stage2 has 1) are extracted from each window. then `if _max>1.5 and _std>1 and _numcompo == 2`, I segment the window as stage1 (coded as 1), `if _max<1.1 and _std<1 and _numcompo == 1`, I segment the window as stage2 (coded as -1), otherwise the window is stage3 (coded as 0). The segmentation result on output1 is shown below: 
 ![alt text][P7_output1_segmentation]
 THe segmentation looks good.
 
