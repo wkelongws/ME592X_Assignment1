@@ -1,5 +1,6 @@
-##ME 592 Assignment 1
-###This file contains comments and results for Assignment1. Source codes can be found in 'Assignment1.ipynb'.
+## ME 592 Assignment 1
+
+### This file contains comments and results for Assignment1. Source codes can be found in 'Assignment1.ipynb'.
 
 ---
 
@@ -31,7 +32,7 @@
 [P8_data_visualize]: ./output_images/P8_data_visualize.png
 [P8_distances]: ./output_images/P8_distances.png
 
-####P1 Basic Image Processing
+#### P1 Basic Image Processing
 
 The difference between the first image and the target image is just: the pixel intensities in the first image are scaled down from the target image with a fixed rate. So the frist image looks darker. To fix this, I can either scale the pixel intensities back or just simply display the frist image in gray scale. Results shown below:
 ![alt text][P1_1]
@@ -42,7 +43,7 @@ The second image was added random noises in. I can reduce the noise by smoothing
 The third image has both noise and dark shading. Combine the methods used for image1 and image2 provide the following results:
 ![alt text][P1_3]
 
-####P2 Background subtraction
+#### P2 Background subtraction
 
 As being aware that binary thresholding method is far from enough to get the sample results provided in the given PPT, still binary thresholding method was used as instructed.
 
@@ -60,18 +61,18 @@ Histogram of 9 color channels of image2:
 Result after thresholding on S channel with range (20,130):
 ![alt text][P2_2_s_20_130]
 
-####P3 Metric in image space
+#### P3 Metric in image space
 
 MSE and SSIM are selected as distance mesure for this problem. Lower value in MSE and higher value in SSIM meams higher similarity. The distance between each feature map and the input are plotted below, MSE and SSIM measures the similarity similarly.
 ![alt text][P3]
 
-####P4 Shading correction
+#### P4 Shading correction
 
 I used `np.mean(Imax.astype("float")-Imin.astype("float"))` as the constant in the equation described [here](http://www.mif.vu.lt/atpazinimas/dip/FIP/fip-Shading-2.html)
 Then SSIMs is calcualted and are plotted below, all SSIMs shown in the figure are between the corresponding image and the groud truth image:
 ![alt text][P4_scale_mean]
 
-####P5 Image pre-processing and transformation
+#### P5 Image pre-processing and transformation
 
 5000 50by50 patches are randomly collected from the provided 8 images. Some of them are randomly chosen and shown below:
 ![alt text][P5_pathes]
@@ -83,7 +84,7 @@ And channel by channel distribution of original patches and whittened patches lo
 ![alt text][P5_channel_histograms]
 As shown in the figure above, the channel distributions are balanced after whittening. Since the variance are equalized in the prewhittened data, it can help in the latter data analysis process.
 
-####P7 Time series pre-processing
+#### P7 Time series pre-processing
 
 First the data are loaded in and a small piece is visualized below:
 ![alt text][P7_signals]
@@ -115,7 +116,7 @@ The figure below shows the running average calculated on the sliding windows:
 ![alt text][P7_running_average]
 And the low maginitue and the flat trend shows both the two systems are stationary.
 
-####P8 Metrics in Time series space
+#### P8 Metrics in Time series space
 
 First data are loaded in and visualized:
 ![alt text][P8_data_visualize]
